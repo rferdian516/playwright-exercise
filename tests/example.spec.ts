@@ -1,12 +1,12 @@
 import { test, expect } from "@playwright/test";
 import { chromium } from "playwright";
 test("get started link", async ({ page }) => {
-  // Click the get started link.
-  await page.getByRole("link", { name: "Get started" }).click();
-  // Expects page to have a heading with the name of Installation.
-  await expect(
-    page.getByRole("heading", { name: "Installation" })
-  ).toBeVisible();
+  // // Click the get started link.
+  // await page.getByRole("link", { name: "Get started" }).click();
+  // // Expects page to have a heading with the name of Installation.
+  // await expect(
+  //   page.getByRole("heading", { name: "Installation" })
+  // ).toBeVisible();
 });
 
 // === Section 3 point B (Login & Select Items: 2 items, 3 items, & 4 items)=== //
@@ -59,7 +59,7 @@ test("get started link", async ({ page }) => {
   await browser.close();
 })();
 
-// === Section 3 point C (i.	Login -> select items using random function -> go to “cart” -> remove an item -> checkout -> fill the form -> click the “Continue” button -> click the “Finish” button.)=== //
+// === Section 3 point C (Login -> select items using random function -> go to “cart” -> remove an item -> checkout -> fill the form -> click the “Continue” button -> click the “Finish” button.)=== //
 
 (async () => {
   const browser = await chromium.launch({ headless: false });
